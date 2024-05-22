@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h3>Appointment Form</h3>
+        <form onsubmit="AddLocalStorage(event)">
+            <label for="name">Name:</label>
+            <input type="text" name="username" >
+            <label for="email">Email:</label>
+            <input type="email" name="email" >
+            <label for="phone">Phone Number:</label>
+            <input type="number" name="phone">
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            function AddLocalStorage(event){
+                event.preventDefault();
+                const name= event.target.username.value;
+                const email= event.target.email.value;
+                const phone= event.target.phone.value;
+                localStorage.setItem('Name', name);
+                localStorage.setItem('Email', email);
+                localStorage.setItem('Phone Number', phone);
+            }
+        </script>
+    </body>
+</html>
