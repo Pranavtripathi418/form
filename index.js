@@ -22,6 +22,18 @@ showUserOnScreen(userDetails);
 function showUserOnScreen(userDetails){
 const parent= document.getElementById('userList');
 const child= document.createElement('li');
+const Delete = document.createElement('button');
+Delete.textContent="Delete";
+Delete.onclick = function(){
+    deleteUser(userDetails);
+    parent.removeChild(child);
+}
 child.textContent= userDetails.username+ '-' +userDetails.email+ '-' + userDetails.phone;
+child.appendChild(Delete)
 parent.appendChild(child);
+}
+
+function deleteUser(userDetails) {
+    let users = JSON.parse(localStorage.getItem('User Details')) 
+ 
 }
