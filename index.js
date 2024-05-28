@@ -1,4 +1,4 @@
-document.getElementById('userForm').addEventListener('submit', handleFormSubmit);
+// document.getElementById('userForm').addEventListener('submit', handleFormSubmit);
 
 function handleFormSubmit(event){
     event.preventDefault();
