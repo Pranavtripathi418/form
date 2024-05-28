@@ -16,5 +16,12 @@ function handleFormSubmit(event){
     const value= JSON.stringify(userDetails);
 
     localStorage.setItem('UserDetail', value);
-
+showUserOnScreen(userDetails);
+    
+}
+function showUserOnScreen(userDetails){
+const parent= document.getElementById('userList');
+const child= document.createElement('li');
+child.textContent= userDetails.username+ '-' +userDetails.email+ '-' + userDetails.phone;
+parent.appendChild(child);
 }
